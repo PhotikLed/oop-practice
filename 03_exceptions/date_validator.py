@@ -8,7 +8,7 @@ from typing import List, Tuple, Dict
 
 
 def validate_record(name: str, birthdate: str) -> bool:
-    """Проверяет соответствие даты рождения формату ДД.ММ.ГГГГ с обработкой исключения."""
+    """Проверяет соответствие даты рождения формату ДД.ММ.ГГГГ."""
     try:
         datetime.strptime(birthdate, '%d.%m.%Y')
         return True
@@ -18,7 +18,7 @@ def validate_record(name: str, birthdate: str) -> bool:
 
 
 def process_people(entries: List[Tuple[str, str]]) -> Dict[str, int]:
-    """Обрабатывает список сотрудников и подсчитывает число валидных и невалидных записей."""
+    """Обрабатывает список сотрудников и подсчитывает статистику записей."""
     good_count = 0
     bad_count = 0
 
